@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "myapp-ngrx"
+    }
+  },
+  "defaultProject": "myapp-ngrx",
+  "cli": {
+    "analytics": "19117108-74a8-4b7f-9d12-1f875af7707d"
+  }
 }
