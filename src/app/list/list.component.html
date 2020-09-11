@@ -1,4 +1,7 @@
-<li *ngFor="let item of users$ | async; let i = index" style="list-style: none">
+<li
+  *ngFor="let item of receiveFilterUsers; let i = index"
+  style="list-style: none"
+>
   <ul>
     <app-item [item]="item"></app-item>
   </ul>

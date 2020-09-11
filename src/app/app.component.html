@@ -3,12 +3,16 @@
     <h2>Demo NgRx</h2>
   </header>
   <!-- count how many item we have -->
-  <aside class="aside aside-2"><app-counter></app-counter></aside>
+  <aside class="aside aside-2">
+    <app-counter
+      [receiveFilterUsersNumber]="receiveFilterUsersNumber"
+    ></app-counter>
+  </aside>
   <article class="main">
-    <p>
-      <!-- show list -->
-      <app-list></app-list>
-    </p>
+    <app-filter (messageEvent)="receiveFilterUserNumber($event)"></app-filter>
+
+    <!-- show list -->
+    <app-list [receiveFilterUsers]="receiveFilterUsers"></app-list>
   </article>
 
   <!-- show how many item we checked -->

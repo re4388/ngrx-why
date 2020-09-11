@@ -9,7 +9,9 @@ import { ListComponent } from './list/list.component';
 import { FooterComponent } from './footer/footer.component';
 import { CounterComponent } from './counter/counter.component';
 import { SummaryComponent } from './summary/summary.component';
+import { FilterComponent } from './filter/filter.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,8 +20,15 @@ import { SummaryComponent } from './summary/summary.component';
     FooterComponent,
     CounterComponent,
     SummaryComponent,
+    FilterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
