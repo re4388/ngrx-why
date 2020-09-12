@@ -3,6 +3,10 @@
   style="list-style: none"
 >
   <ul>
-    <app-item [item]="item"></app-item>
+    <app-item
+      [item]="item"
+      [index]="i"
+      (editUserEvent)="receiveEditUserEvent($event)"
+    ></app-item>
   </ul>
 </li>

@@ -11,6 +11,7 @@ import { User } from './models/users.model';
 export class AppComponent implements OnInit {
   receiveFilterUsersNumber: number;
   receiveFilterUsers: User[];
+  editUser: User;
 
   ngOnInit(): void {}
 
@@ -18,5 +19,10 @@ export class AppComponent implements OnInit {
     console.log($event);
     this.receiveFilterUsersNumber = $event.length;
     this.receiveFilterUsers = $event;
+  }
+
+  receiveEdit($event): void {
+    // console.log($event);
+    this.editUser = $event;
   }
 }

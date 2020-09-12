@@ -12,12 +12,18 @@
     <app-filter (messageEvent)="receiveFilterUserNumber($event)"></app-filter>
 
     <!-- show list -->
-    <app-list [receiveFilterUsers]="receiveFilterUsers"></app-list>
+    <app-list
+      [receiveFilterUsers]="receiveFilterUsers"
+      (editUserToTopLevel)="receiveEdit($event)"
+    >
+    </app-list>
   </article>
 
   <!-- show how many item we checked -->
-  <aside class="aside aside-1"><app-summary></app-summary></aside>
+  <aside class="aside aside-1">
+    <app-summary [editUser]="editUser"></app-summary>
+  </aside>
 
   <!-- show 'all checked' if all checked -->
-  <footer class="footer"><app-footer></app-footer></footer>
+  <!-- <footer class="footer"><app-footer></app-footer></footer> -->
 </div>
